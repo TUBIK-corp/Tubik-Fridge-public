@@ -1,0 +1,128 @@
+.code-page-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.code-page-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.code-page-telegram-info {
+  margin-bottom: 2rem;
+}
+
+.code-page-telegram-info h1 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.code-page-telegram-instruction {
+  color: #34495e;
+  margin-bottom: 1rem;
+}
+
+.code-page-telegram-info ol {
+  padding-left: 1.2rem;
+  color: #34495e;
+}
+
+.code-page-telegram-info ol li {
+  margin-bottom: 0.5rem;
+}
+
+.code-page-telegram-info a {
+  color: #4787ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.code-page-telegram-info a:hover {
+  text-decoration: underline;
+}
+
+  .code-page-chat-id-box, .code-page-code-generation-box {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+  }
+
+  .code-page-chat-id {
+    font-size: 1.2rem;
+    font-family: monospace;
+    color: #4787ff;
+    margin-right: 1rem;
+  }
+
+  .code-page-copy-button {
+    padding: 0.5rem 1rem;
+    background: #4787ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .code-page-copy-button:hover {
+    background: #356dcc;
+  }
+
+  .code-page-code-display {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .code-page-code {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: #27ae60;
+    font-weight: bold;
+  }
+
+  .code-page-timer {
+    background: #ff4444;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 16px;
+    font-size: 0.9rem;
+  }
+
+  .code-page-expiry-info {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .code-page-no-code {
+    color: #666;
+    font-style: italic;
+  }
+
+  .code-page-generate-button {
+    padding: 0.8rem 1.5rem;
+    background: #4787ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+  }
+
+  .code-page-generate-button:disabled {
+    background: #a0b9ff;
+    cursor: not-allowed;
+  }
+
+  .code-page-generate-button:hover:not(:disabled) {
+    background: #356dcc;
+  }

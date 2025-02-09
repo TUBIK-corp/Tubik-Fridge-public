@@ -1,0 +1,212 @@
+.scanner-page-container {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --success-color: #27ae60;
+  --background: #f8f9fa;
+  --text-color: #2c3e50;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.scanner-page-controls {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.scanner-page-camera-select {
+  padding: 0.8rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  color: var(--text-color);
+  transition: var(--transition);
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%232c3e50%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.65rem auto;
+}
+
+.scanner-page-camera-select:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.scanner-page-control-button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scanner-page-control-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+}
+
+.scanner-page-control-button:active {
+  transform: translateY(0);
+}
+
+#reader {
+  width: 100%;
+  min-height: 400px;
+  margin: 2rem 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  position: relative;
+  background: var(--primary-color);
+}
+
+.scanner-page-scanned-product-info {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: var(--background);
+  border-radius: var(--border-radius);
+  animation: slideUp 0.4s ease;
+}
+
+.scanner-page-scanned-product-info h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.scanner-page-product-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.scanner-page-detail-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.scanner-page-detail-item strong {
+  display: block;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.scanner-page-detail-item p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.scanner-page-allergens-container {
+  margin-top: 1.5rem;
+}
+
+.scanner-page-allergen-tag {
+  display: inline-block;
+  background: #e74c3c;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin: 0.3rem;
+}
+
+.scanner-page-action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.scanner-page-add-to-fridge-button,
+.scanner-page-add-to-shopping-button {
+  flex: 1;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 250px;
+}
+
+.scanner-page-add-to-fridge-button {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.scanner-page-add-to-shopping-button {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.scanner-page-add-to-fridge-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.scanner-page-add-to-shopping-button:hover {
+  background-color: #219a52;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .scanner-page-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .scanner-page-controls {
+    grid-template-columns: 1fr;
+  }
+
+  #reader {
+    min-height: 300px;
+  }
+
+  .scanner-page-action-buttons {
+    flex-direction: column;
+  }
+
+  .scanner-page-add-to-fridge-button,
+  .scanner-page-add-to-shopping-button {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

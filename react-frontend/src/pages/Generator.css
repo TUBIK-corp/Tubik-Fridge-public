@@ -1,0 +1,242 @@
+.generator-page-wrapper * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.generator-page-wrapper {
+  margin: 1rem;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+.generator-page-container {
+  width: 100%;
+  /* max-width: 1400px; */
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+  padding: 2.5rem;
+}
+
+.generator-page-main-title {
+  color: #1D184E;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.generator-page-columns-container {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 3rem;
+}
+
+.generator-page-main-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.generator-page-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.generator-page-input-group label {
+  font-weight: 500;
+  color: #282828;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.generator-page-input-group input,
+.generator-page-input-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #CACACA;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.generator-page-input-group input:focus,
+.generator-page-input-group select:focus {
+  outline: none;
+  border-color: #5B5BF9;
+  box-shadow: 0 0 0 2px rgba(91, 91, 249, 0.2);
+}
+
+.generator-page-expandable-section {
+  border: 1px solid #CACACA;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+.generator-page-section-summary {
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  background: #EEEEEE;
+  border-radius: 12px;
+  list-style: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.generator-page-section-summary:hover {
+  background: #E0E0E0;
+}
+
+.generator-page-section-summary::-webkit-details-marker {
+  display: none;
+}
+
+.generator-page-section-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.generator-page-grid-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.generator-page-nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.generator-page-allergen-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.generator-page-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.generator-page-checkbox-item input {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid #CACACA;
+  border-radius: 4px;
+  accent-color: #5B5BF9;
+}
+
+.generator-page-generate-button {
+  background: #458cff;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.generator-page-generate-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.generator-page-qr-column {
+  position: relative;
+}
+
+.generator-page-qr-section {
+  position: sticky;
+  top: 2rem;
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #f8f8f8;
+  padding: 1.5rem;
+  border-radius: 18px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.generator-page-qr-frame {
+  background: #5B5BF9;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+#qrCode {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1/1;
+  background: white;
+  border-radius: 8px;
+  display: block;
+}
+
+.generator-page-qr-buttons {
+  display: grid;
+  gap: 1rem;
+}
+
+.generator-page-qr-button {
+  background: #5B5BF9;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.generator-page-qr-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 1200px) {
+  .generator-page-columns-container {
+    grid-template-columns: 1fr;
+  }
+
+  .generator-page-qr-column {
+    order: -1;
+    max-width: 350px;
+    margin: 0 auto 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .generator-page-wrapper {
+    margin: 1rem;
+  }
+
+  .generator-page-container {
+    padding: 1rem;
+    border-radius: 18px;
+  }
+
+  .generator-page-grid-row,
+  .generator-page-nutrition-grid,
+  .generator-page-allergen-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .generator-page-qr-section {
+    padding: 1rem;
+  }
+
+  .generator-page-main-title {
+    font-size: 1.5rem;
+  }
+}

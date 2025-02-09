@@ -1,0 +1,348 @@
+.product-card-container {
+  width: 300px;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  color: var(--neutral-950);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+  transition: transform 0.2s ease;
+}
+
+.product-card-container:hover {
+  transform: translateY(-2px);
+}
+
+.product-card-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary-500);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.product-card-button:hover {
+  transform: scale(1.1);
+  background-color: rgb(200, 40, 40);
+}
+
+.product-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--neutral-950);
+  border-bottom: 1px solid var(--neutral-300);
+  padding-bottom: 8px;
+  margin: 0;
+}
+
+.product-card-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-card-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--neutral-950);
+}
+
+.product-card-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.product-card-icon {
+  font-size: 20px;
+  color: var(--primary-500);
+}
+
+.product-card-icon-warning {
+  font-size: 18px;
+  color: var(--red-500);
+}
+
+.product-card-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.product-card-allergens {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--neutral-950);
+  font-size: 14px;
+  padding-top: 8px;
+  border-top: 1px solid var(--neutral-300);
+}
+
+.product-card-allergens {
+  font-size: 20px;
+  color: var(--red-500);
+}
+
+.product-card-added-date {
+  display: block;
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* Режим списка */
+.product-card-list {
+  width: 100% !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  min-height: 80px;
+}
+
+.product-card-list .product-card-title {
+  border-bottom: none;
+  padding-bottom: 0;
+  flex: 0 1 25%;
+  min-width: 160px;
+  margin-right: auto;
+}
+
+.product-card-list .product-card-section {
+  flex: 1 1 auto;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card-list .product-card-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  align-items: center;
+  flex: 1;
+}
+.product-card-list .product-card-item {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.product-card-list .product-card-icon {
+  font-size: 18px !important;
+}
+
+.product-card-list .product-card-expiry-date-minimum {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.9em;
+}
+
+@media (min-width: 1600px) {
+  .product-card-list .product-card-section {
+    gap: 24px;
+  }
+
+  .product-card-list .product-card-row {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card-list {
+    flex-direction: column !important;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .product-card-list .product-card-title {
+    width: 100%;
+    margin-right: 0;
+    flex: none;
+  }
+
+  .product-card-list .product-card-section {
+    flex-direction: column;
+    width: 100%;
+    gap: 6px;
+  }
+
+  .product-card-list .product-card-row {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-between;
+  }
+
+  .product-card-list .product-card-item {
+    flex: 1 1 45%;
+    min-width: 45%;
+  }
+}
+
+/* Компактный режим */
+.product-card-compact {
+  width: 100% !important;
+  padding: 12px !important;
+  gap: 8px !important;
+}
+
+.product-card-compact .product-card-title {
+  font-size: 16px !important;
+}
+
+.product-card-compact .product-card-icon {
+  font-size: 16px !important;
+}
+
+.product-card-compact .product-card-text {
+  font-size: 12px !important;
+}
+
+.product-card-compact .product-card-allergens {
+  font-size: 12px !important;
+}
+
+/* Модальные окна */
+.product-card-delete-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.product-card-delete-modal {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.product-card-delete-modal h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.product-card-modal-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.product-card-confirm-button {
+  background: #ff4444;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-card-cancel-button {
+  background: #eee;
+  color: #333;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-card-confirm-button:hover {
+  opacity: 0.9;
+}
+
+.product-card-expiry-date-minimum {
+  font-size: 0.8rem;
+  color: #777;
+  font-weight: normal;
+  margin: 0rem;
+}
+
+@media (max-width: 768px) {
+  .product-card-container {
+    width: 100%;
+  }
+
+  .product-card-list {
+    flex-direction: column !important;
+    gap: 12px;
+  }
+
+  .product-card-list .product-card-section {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .product-card-compact {
+    padding: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card-container {
+    width: 100% !important;
+    margin: 0 8px;
+  }
+
+  .product-card-list {
+    margin: 0;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .product-card-list .product-card-section {
+    flex-direction: column !important;
+    gap: 6px;
+  }
+
+  .product-card-list .product-card-row {
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: space-between;
+  }
+
+  .product-card-button {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Для режима компакт */
+@media (max-width: 480px) {
+  .products-compact {
+    grid-template-columns: 1fr !important;
+  }
+
+  .product-card-compact .product-card-section {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .product-card-compact .product-card-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

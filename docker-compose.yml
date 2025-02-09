@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "24030:24030"
+    environment:
+      DB_USER: postgres
+      DB_PASSWORD: db_password
+      DB_HOST: 127.0.0.1
+      DB_PORT: 8888
+      DB_NAME: smartfridge
+      JWT_KEY: your_jwt_key
+      JWT_ISSUER: your_jwt_user
+      CLIENT_ID: your_client_id
+      CLIENT_SECRET: your_client_secret
+  frontend:
+    build: ./react-frontend
+    ports:
+      - "24009:24009"

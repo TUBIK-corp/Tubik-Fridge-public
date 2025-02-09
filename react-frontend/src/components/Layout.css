@@ -1,0 +1,152 @@
+.layout-container {
+  width: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+.layout-header {
+  background: linear-gradient(to right, #3584fc, #1f64f1, #3584fc);
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  height: 45px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.layout-logo {
+  min-width: 200px;
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.layout-nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: transparent;
+  height: 100%;
+}
+
+.layout-menu-button {
+  background-color: rgba(23, 78, 222, 0.8);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  height: 36px;
+  margin: auto 0;
+}
+
+.layout-menu-button:hover {
+  background-color: rgba(31, 100, 241, 0.9);
+  transform: scale(1.05);
+}
+
+.layout-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 8px;
+  min-width: 200px;
+  z-index: 1000;
+  transform-origin: top right;
+  animation: menuAppear 0.3s ease forwards;
+}
+
+@keyframes menuAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.layout-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  color: #282828;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+}
+
+.layout-menu-item:hover {
+  background-color: #f0f7ff;
+  transform: translateX(5px);
+}
+
+.layout-menu-item-logout {
+  color: #dc2626;
+}
+
+.layout-menu-item-logout:hover {
+  background-color: #fff0f0;
+}
+
+.layout-menu-item .icon-md {
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+}
+
+.layout-menu-item:hover .icon-md {
+  transform: scale(1.1);
+}
+
+
+hr {
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+  margin: 4px 0;
+}
+
+.icon-header {
+  height: 64px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .layout-header {
+    padding: 12px;
+  }
+
+  .layout-logo {
+    font-size: 20px;
+    max-width: 40px;
+  }
+
+  .layout-menu {
+    position: fixed;
+    top: 69px;
+    right: 12px;
+    width: calc(100% - 24px);
+    max-width: 300px;
+  }
+}
