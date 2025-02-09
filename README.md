@@ -45,4 +45,5 @@ npm run dev
 
 ## Ссылка на видеоролик:
 [Видео на Rutube](https://rutube.ru/video/private/b2133a893b1e3b2828f30b8e8a7ad17b/?p=JccJZUNcXn3nEzcnXV0ytA)
+[Видео на запасной случай](https://tubik-corp.ru/files/pred.html)
 
